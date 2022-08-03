@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}Book Suggestion{% endblock %}
+
+{% block main %}
+
+
+ <style>.bg-mynav {
+        background-color: #6ea2d7;
+      }
+
+      td {
+          line-height: 3rem;
+      }
+
+</style>
+
+    <div class="container">
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+                <th scope="col">UserID</th>
+              <th scope="col">UserName</th>
+              <th scope="col">UserEmail</th>
+              <th scope="col">BookSuggested</th>
+              <th scope="col">BookAuthor</th>
+            </tr>
+          </thead>
+          <tbody id="mytable">
+             {% for item in books %}
+        <tr>
+             <td>{{ item.user_id }}</td>
+          <td>{{ item.user_name }}</td>
+          <td>{{ item.user_email }}</td>
+          <td>{{ item.book_title }}</td>
+          <td>{{ item.book_author }}</td>
+        </tr>
+
+      {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+{% endblock %}

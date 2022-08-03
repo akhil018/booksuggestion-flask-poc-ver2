@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div class="container">
+  <div class="card-deck mb-3">
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal text-center">Login</h4>
+      </div>
+      <div class="card-body">
+        <form action="/" method="post" enctype="multipart/form-data">
+          <label for="user_email">Email</label>
+          <input type="email" class="form-control" name="user_email" id="user_email" value="" required>
+          <br>
+          <label for="password">Password</label>
+          <input type="password" class="form-control" name="password" id="password" value="" required>
+          <br>
+          <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+<!--  {% if codes %}-->
+<!--  <h2>Codes you have created:</h2>-->
+<!--  <ul>-->
+<!--    {% for code in codes %}-->
+<!--    <a href="{{ url_for('urlshort.redirect_to_url', code=code) }}">-->
+<!--      <li>{{ code }}</li>-->
+<!--    </a>-->
+<!--    {% endfor %}-->
+<!--  </ul>-->
+<!--  {% endif %}-->
+</div>
+{% endblock %}
